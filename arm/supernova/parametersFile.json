@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmName": {
+      "value": "supernova"
+    },
+    "adminUsername": {
+      "value": "dimazaurus"
+    },
+    "authenticationType": {
+      "value": "sshPublicKey"
+    },
+    "adminPasswordOrKey": {
+      "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD0wKrTuC/3xaMhfqEqW0H/Snincz2mXrCVQBzdCrDJ5XdOTXzkQNcjRzwkgq4BhbbQFeGQf+26bnd1M9PDZeCz73aXHnNI2LQVJDZIhMiFZ7PShiFc/y5uBhYRARtVqLnQTnSnHIX2/XC6/0tbepWzXzsJGVCI1zlfN8tpSiys3vppH4MuJeUgRaUhr/xF5hL0XCCjomh5wnyEuk4cmtrkB5eQYcemu20GYctew6r0bJ8grzOgG8Bf8b9V9JArNuLcOAjcTvVAzfw1ZiEN1V6joRtIMXy0w+TzKqyXn2nkEKCjo1jdsXCoFd5j2hdDvz6etHDnBv2MDq9fJ/S+fUbp scherbie@Hurlalot-Yak"
+    },
+    "dnsLabelPrefix": {
+      "value": "[toLower(format('{0}-{1}', parameters('vmName'), uniqueString(resourceGroup().id)))]"
+    },
+    "ubuntuOSVersion": {
+      "value": "Ubuntu-2004"
+    },
+    "location": {
+      "value": "eastus2"
+    },
+    "vmSize": {
+      "value": "Standard_D2s_v3"
+    },
+    "virtualNetworkName": {
+      "value": "vNet"
+    },
+    "subnetName": {
+      "value": "Subnet"
+    },
+    "networkSecurityGroupName": {
+      "value": "SecGroupNet"
+    },
+    "securityType": {
+      "value": "TrustedLaunch"
+    }
+  }
+}
